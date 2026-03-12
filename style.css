@@ -1,0 +1,705 @@
+:root {
+    --bg-light: #ffffff;
+    --bg-dark: #0a0a0a;
+    --text-light: #111111;
+    --text-dark: #ffffff;
+    --text-gray: #666666;
+    --text-gray-light: #999999;
+    --accent: #ff4500;
+    --font-stack: 'Inter', sans-serif;
+
+    --card-bg-light: #f5f5f5;
+    --card-bg-dark: #121212;
+    --border-radius: 20px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Typography */
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.125rem;
+    color: var(--text-gray);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-align: center;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+    border: 2px solid var(--accent);
+    font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.btn.small {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+.btn.full {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 16px;
+}
+
+/* Links */
+.link-orange {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.link-orange:hover {
+    text-decoration: underline;
+}
+
+.link-black {
+    color: var(--text-light);
+    font-weight: 600;
+    margin-right: 1.5rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 5% 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+/* Hero Grid Gallery */
+.hero-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.grid-cell {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    background-color: var(--card-bg-light);
+    transition: transform 0.4s ease;
+}
+
+.grid-cell:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.grid-cell.dark {
+    background-color: var(--card-bg-dark);
+}
+
+.grid-cell.rect-v {
+    grid-row: span 2;
+}
+
+.grid-cell.square {
+    /* Default */
+}
+
+/* Real Images placeholder styling */
+.img-placeholder {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Brands Marquee */
+.brands {
+    padding: 3rem 0;
+    overflow: hidden;
+    background: #f9f9f9;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.marquee {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+.marquee .tech-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.marquee .tech-item img {
+    height: 36px;
+    width: auto;
+    filter: grayscale(100%) opacity(60%);
+    transition: var(--transition);
+}
+
+.marquee .tech-item:hover img {
+    filter: grayscale(0%) opacity(100%);
+}
+
+.marquee span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-50% - 2rem));
+    }
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 8rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.portfolio-header p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.portfolio-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--card-bg-light);
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.portfolio-img-container {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.portfolio-overlay .btn {
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-card:hover .portfolio-img {
+    transform: scale(1.08);
+}
+
+.portfolio-card:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-card:hover .portfolio-overlay .btn {
+    transform: translateY(0);
+}
+
+.portfolio-info {
+    padding: 2.5rem;
+}
+
+.portfolio-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Dark Sections */
+.dark-section {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.dark-section p {
+    color: var(--text-gray-light);
+}
+
+/* Motivation Section */
+.motivation {
+    padding: 8rem 5%;
+}
+
+.motivation-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.motivation-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.office-mockup {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    height: 500px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: #222;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 8rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.pricing-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    align-items: end;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg-light);
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    position: relative;
+    border: 1px solid #eee;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.card.dark {
+    background-color: var(--card-bg-dark);
+    color: var(--text-dark);
+    border-color: #333;
+}
+
+.card.dark p.plan-desc {
+    color: #888;
+}
+
+.card.dark .price {
+    color: white;
+}
+
+.card.dark .billed {
+    color: #666;
+}
+
+.card.dark li:not(.disabled) {
+    color: #ddd;
+}
+
+.badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--accent);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.plan-desc {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    height: 45px;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.billed {
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.features li {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.features li::before {
+    content: '✓';
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.features li.disabled {
+    color: #ccc;
+}
+
+.features li.disabled::before {
+    content: '−';
+    color: #ccc;
+}
+
+/* CTA Banner */
+.cta-banner {
+    padding: 0 5% 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cta-box {
+    background-color: #f5f5f5;
+    border-radius: var(--border-radius);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.cta-box p {
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+}
+
+/* Footer / Benefits */
+.footer {
+    padding: 8rem 5% 4rem;
+}
+
+.footer-top {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.benefits-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.benefit-item {
+    height: 300px;
+    background-color: #1a1a1a;
+    border-radius: var(--border-radius);
+}
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: var(--bg-light);
+    color: var(--text-light);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-overlay.active .modal {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    color: var(--text-gray);
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    color: var(--text-light);
+}
+
+.modal h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .grid-cell.rect-v {
+        grid-row: span 1;
+        height: 300px;
+    }
+
+    .grid-cell.square {
+        height: 300px;
+    }
+
+    .pricing-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .motivation-content,
+    .pricing-header,
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    /* Add hamburger menu logic later if needed */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding-top: 2rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-img-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
