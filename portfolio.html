@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Clavora Studios - Our Latest Digital Masterpieces</title>
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="Clavora Studios Logo" class="logo-img">
+        </a>
+        <div class="brand-title">Clavora Studi<span class="accent-letter">o</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+        </ul>
+    </nav>
+
+    <!-- Portfolio Hero Section -->
+    <header class="portfolio-hero">
+        <div class="hero-content">
+            <h1>Our Digital<br>Masterpieces</h1>
+            <p>A showcase of our finest work, combining cutting-edge technology with award-winning design to create exceptional digital experiences.</p>
+        </div>
+    </header>
+
+    <!-- Portfolio Filter/Categories (Optional but adds premium feel) -->
+    <section class="portfolio-showcase">
+        <div class="container">
+            <div class="portfolio-categories">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="app">Mobile Apps</button>
+                <button class="filter-btn" data-filter="brand">Branding</button>
+            </div>
+
+            <div class="portfolio-grid-detailed">
+                <!-- Project 1 -->
+                <div class="portfolio-card-detailed" data-category="web">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-img-bg" id="img-port-1"></div>
+                        <div class="portfolio-tag">Web Application</div>
+                        <div class="portfolio-hover-content">
+                            <h3>Solarflow</h3>
+                            <p>Advanced admin dashboard for renewable energy monitoring.</p>
+                            <a href="http://solarproject-henna.vercel.app/" target="_blank" class="btn btn-primary small">View Case Study &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-card-detailed" data-category="web">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-img-bg" id="img-port-2"></div>
+                        <div class="portfolio-tag">E-Commerce</div>
+                        <div class="portfolio-hover-content">
+                            <h3>Noir Cafe</h3>
+                            <p>Premium coffee brand digital storefront and ordering system.</p>
+                            <a href="https://heyshakir.github.io/cafe/" target="_blank" class="btn btn-primary small">Explore Live &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-card-detailed" data-category="app">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-img-bg" id="img-port-3"></div>
+                        <div class="portfolio-tag">Mobile App</div>
+                        <div class="portfolio-hover-content">
+                            <h3>Fitness Tracker</h3>
+                            <p>Interactive iOS/Android app for high-performance athletes.</p>
+                            <a href="#" class="btn btn-primary small">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-card-detailed" data-category="brand">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-img-bg" id="img-port-4"></div>
+                        <div class="portfolio-tag">Branding</div>
+                        <div class="portfolio-hover-content">
+                            <h3>Enterprise Dark</h3>
+                            <p>Complete visual identity overhaul for tech conglomerates.</p>
+                            <a href="#" class="btn btn-primary small">View Details &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 (New placeholder) -->
+                <div class="portfolio-card-detailed" data-category="web">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-img-bg" id="img-laptop-open"></div>
+                        <div class="portfolio-tag">SaaS Design</div>
+                        <div class="portfolio-hover-content">
+                            <h3>CloudSync Pro</h3>
+                            <p>Modern cloud infrastructure management interface.</p>
+                            <a href="#" class="btn btn-primary small">View Demo &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 (New placeholder) -->
+                <div class="portfolio-card-detailed" data-category="app">
+                    <div class="portfolio-img-wrapper">
+                        <div class="portfolio-img-bg" id="img-phone-fold"></div>
+                        <div class="portfolio-tag">UX Research</div>
+                        <div class="portfolio-hover-content">
+                            <h3>SecurePay</h3>
+                            <p>Revolutionizing mobile payments with biometric security.</p>
+                            <a href="#" class="btn btn-primary small">Case Study &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="cta-banner">
+        <div class="cta-box">
+            <h2>Have a vision in mind?</h2>
+            <p>Let's collaborate to build your next big project. Our team is ready to deliver excellence.</p>
+            <a href="#book-call" class="btn btn-primary">Start a Project &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer dark-section">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Clavora Studios Logo" class="logo-img">
+                    <span class="brand-name">Clavora Studi<span class="accent-letter">o</span></span>
+                </div>
+                <p class="footer-tagline">We transform complex ideas into stunning digital experiences that drive growth and inspire users.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/clavora_studio" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">UI/UX Design</a></li>
+                    <li><a href="services.html">Web Development</a></li>
+                    <li><a href="services.html">Mobile Apps</a></li>
+                    <li><a href="services.html">Branding</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> hello@clavora.studio</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 000-0000</li>
+                    <li><i class="fas fa-location-dot"></i> 123 Creative Way, Digital City</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Clavora Studios. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Book Call Modal -->
+    <div class="modal-overlay" id="bookCallModal">
+        <div class="modal">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2>Book a Call</h2>
+            <p>Leave your details and our team will get back to you shortly.</p>
+            <form id="bookCallForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required minlength="3" pattern="^[a-zA-Z\s]+$" title="Name should only contain letters and spaces">
+                    <span class="error-msg">Please enter a valid name (min 3 characters).</span>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Enter your 10-digit mobile number" required pattern="^[0-9]{10}$" maxlength="10" inputmode="numeric" title="Please enter a valid 10-digit mobile number">
+                    <span class="error-msg">Please enter a valid 10-digit mobile number.</span>
+                </div>
+                <button type="submit" class="btn btn-primary full">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
